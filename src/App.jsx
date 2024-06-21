@@ -1,9 +1,8 @@
-import React from 'react';
-import { BrowserRouter, Link, Routes, Route } from 'react-router-dom';
-import { Card, ListGroup } from 'react-bootstrap';
-import Flip from './pages/Flip';
-import PanaraID from './pages/PanaraID';
-import GoogleForm from './pages/GoogleForm';
+import { BrowserRouter, Link, Routes, Route } from 'react-router-dom'
+import { Card, ListGroup } from 'react-bootstrap'
+import Flip from './pages/Flip'
+import PanaraID from './pages/PanaraID'
+import GoogleForm from './pages/GoogleForm'
 
 function App() {
   return (
@@ -17,10 +16,10 @@ function App() {
                 <Link to='/flip'>Flip</Link>
               </ListGroup.Item>
               <ListGroup.Item>
-                <Link to='/panara.id'>panara.id</Link>
+                <Link to='/panara.id'>Website panara.id</Link>
               </ListGroup.Item>
               <ListGroup.Item>
-                <Link to='/panara.id'>Google Form</Link>
+                <Link to='/google-form'>Google Form</Link>
               </ListGroup.Item>
             </ListGroup>
           </Card.Header>
@@ -34,7 +33,7 @@ function App() {
         </Card>
       </BrowserRouter>
     </>
-  );
+  )
 }
 
-export default App;
+export default App

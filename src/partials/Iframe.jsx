@@ -6,6 +6,7 @@ const Iframe = ({ src }) => {
       src={src}
       height='500vh'
       width='100%'
+      sandbox="allow-same-origin allow-scripts"
     />
   )
 }
