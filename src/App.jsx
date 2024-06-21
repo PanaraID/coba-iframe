@@ -1,4 +1,5 @@
 import { Fragment } from 'react'
+import { Card } from 'react-bootstrap';
 
 function App() {
   const Iframe = () => {
@@ -12,7 +13,14 @@ function App() {
 
   return (
     <Fragment>
-      {/* <Design1 /> */}
+      <Card className='text-center'>
+        <Card.Header>
+          <h1>Aplikasi IFrame</h1>
+        </Card.Header>
+        <Card.Body>
+          <p>Test</p>
+        </Card.Body>
+      </Card>
       <Iframe />
     </Fragment>
   );
