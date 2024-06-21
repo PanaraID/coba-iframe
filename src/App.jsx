@@ -1,28 +1,39 @@
-import { Fragment } from 'react'
-import { Card } from 'react-bootstrap';
+import React from 'react';
+import { BrowserRouter, Link, Routes, Route } from 'react-router-dom';
+import { Card, ListGroup } from 'react-bootstrap';
+import Flip from './pages/Flip';
+import PanaraID from './pages/PanaraID';
+import GoogleForm from './pages/GoogleForm';
 
 function App() {
-  const Iframe = () => {
-    return (
-      <iframe
-        src="https://panara.id"
-        height='1000px'
-      />
-    )
-  }
-
   return (
-    <Fragment>
-      <Card className='text-center'>
-        <Card.Header>
-          <h1>Aplikasi IFrame</h1>
-        </Card.Header>
-        <Card.Body>
-          <p>Test</p>
-        </Card.Body>
-      </Card>
-      <Iframe />
-    </Fragment>
+    <>
+      <BrowserRouter>
+        <Card className='text-center'>
+          <Card.Header>
+            <h1>Aplikasi IFrame</h1>
+            <ListGroup>
+              <ListGroup.Item>
+                <Link to='/flip'>Flip</Link>
+              </ListGroup.Item>
+              <ListGroup.Item>
+                <Link to='/panara.id'>panara.id</Link>
+              </ListGroup.Item>
+              <ListGroup.Item>
+                <Link to='/panara.id'>Google Form</Link>
+              </ListGroup.Item>
+            </ListGroup>
+          </Card.Header>
+          <Card.Body>
+            <Routes>
+              <Route path='/flip' element={<Flip />} />
+              <Route path='/panara.id' element={<PanaraID />} />
+              <Route path='/google-form' element={<GoogleForm />} />
+            </Routes>
+          </Card.Body>
+        </Card>
+      </BrowserRouter>
+    </>
   );
 }
 
